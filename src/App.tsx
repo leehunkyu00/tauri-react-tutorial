@@ -2,7 +2,18 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+// tauri setup function
+import tauriSetup from './tauriSetup'
+
 function App() {
+
+  React.useEffect( () => {
+    (async () => {
+      console.log("START");
+      tauriSetup();
+    })();
+  }, [])
+
   return (
     <div className="App">
       <header className="App-header">
